@@ -1,22 +1,23 @@
 // 1. Cores da Brand
-$ph-orange: #FF9900; // Laranja característico da marca
-$ph-orange-hover: #E68A00; // Laranja escuro para hover
-$ph-orange-light: #FFB74D; // Laranja suave/pastel para avisos/badges
+$ph-orange: #ff9900; // Laranja característico da marca
+$ph-orange-hover: #e68a00; // Laranja escuro para hover
+$ph-orange-light: #ffb74d; // Laranja suave/pastel para avisos/badges
 
-$ph-black: #0A0A0A; // Preto quase puro para o fundo principal
-$ph-dark-card: #1B1B1B; // Grafite escuro para cards e containers
+$ph-black: #0a0a0a; // Preto quase puro para o fundo principal
+$ph-dark-card: #1b1b1b; // Grafite escuro para cards e containers
 $ph-dark-surface: #282828; // Elementos secundários, inputs e bordas
 
-$ph-white: #FFFFFF; // Texto principal
-$ph-gray-text: #A1A1A1; // Texto secundário e legendas
+$ph-white: #ffffff; // Texto principal
+$ph-gray-text: #a1a1a1; // Texto secundário e legendas
 
 // 2. Cores Funcionais Adaptadas
-$ph-danger: #FF4D4D; // Vermelho para erros/ações destrutivas
-$ph-success: #2ECC71; // Verde para confirmações
+$ph-danger: #ff4d4d; // Vermelho para erros/ações destrutivas
+$ph-success: #2ecc71; // Verde para confirmações
 // fontes
 $fonte-padrao: 'Inter', sans-serif;
 
-@use "bootstrap/scss/bootstrap" with ($primary: $ph-orange,
+@use 'bootstrap/scss/bootstrap' with (
+  $primary: $ph-orange,
   $secondary: $ph-dark-surface,
   $success: $ph-success,
   $danger: $ph-danger,
@@ -31,7 +32,8 @@ $fonte-padrao: 'Inter', sans-serif;
   $link-color: $ph-orange,
   $link-hover-color: $ph-orange-hover,
   $font-family-base: $fonte-padrao,
-  $font-family-sans-serif: $fonte-padrao, );
+  $font-family-sans-serif: $fonte-padrao
+);
 
 @use 'bootstrap-icons';
 
@@ -48,7 +50,9 @@ section {
   margin-left: 3px;
   font-weight: 800;
   display: inline-block;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .ph-logo {
@@ -68,6 +72,40 @@ section {
   padding: 0.75rem 1.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+// Cores do Gradiente
+$ph-orange-bright: #ff9900;
+$ph-orange-deep: #cc5200;
+$ph-purple-glow: #5b21b6; // Um toque subtil de roxo no fundo para criar profundidade
+
+.bg-gradient-amber {
+  background: linear-gradient(
+    135deg,
+    $ph-orange-bright 0%,
+    $ph-orange-deep 70%,
+    $ph-purple-glow 100%
+  );
+}
+
+.btn-amber-glow {
+  background: linear-gradient(135deg, #ff9900 0%, #e65100 100%);
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+// Definição das cores opacas
+$ph-black: #22212100;
+$ph-dark-surface: #352f2f;
+$ph-orange-faded: #5c3812; // Laranja queimado, quase marrom/cinza
+
+.bg-gradient-sombrio {
+  background: linear-gradient(135deg, $ph-black 0%, $ph-dark-surface 40%, $ph-orange-faded 100%);
+  border-radius: 33% 67% 53% 47% / 66% 41% 59% 34%;
+  height: 31rem;
+  width: 25rem;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
