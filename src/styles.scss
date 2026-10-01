@@ -1,2 +1,35 @@
-@use 'bootstrap';
-@use 'bootstrap-icons'
+// 1. Cores Base (Roxo, Preto e Branco)
+$purple-main: #6B46C1; // Roxo vibrante/elegante para destaque
+$purple-light: #9F7AEA; // Roxo pastel/suave
+$purple-dark: #442385; // Roxo profundo
+
+$dark-base: #121214; // Preto suave (melhor que #000 para telas)
+$dark-surface: #18181B; // Grafite escuro para cards e superfícies
+$light-base: #FFFFFF; // Branco puro
+$light-surface: #F4F4F5; // Off-white para fundos e áreas suaves
+
+// 2. Cores Pastéis para Estados
+$pastel-mint: #A7F3D0; // Verde pastel (Success)
+$pastel-peach: #FDE68A; // Amarelo/Pêssego pastel (Warning)
+$pastel-rose: #FECDD3; // Rosa pastel (Danger/Error)
+$pastel-sky: #BAE6FD; // Azul pastel (Info)
+
+// fontes
+$fonte-padrao: 'Inter', sans-serif;
+
+@use "bootstrap/scss/bootstrap" with ($primary: $purple-main,
+  $secondary: $purple-light,
+  $success: $pastel-mint,
+  $info: $pastel-sky,
+  $warning: $pastel-peach,
+  $danger: $pastel-rose,
+  $light: $light-surface,
+  $dark: $dark-base,
+  $body-bg: $light-base,
+  $body-color: $dark-base,
+  $font-family-base: $fonte-padrao,
+  $font-family-sans-serif: $fonte-padrao, );
+
+@use 'bootstrap-icons';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
