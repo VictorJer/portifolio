@@ -1,35 +1,73 @@
-// 1. Cores Base (Roxo, Preto e Branco)
-$purple-main: #6B46C1; // Roxo vibrante/elegante para destaque
-$purple-light: #9F7AEA; // Roxo pastel/suave
-$purple-dark: #442385; // Roxo profundo
+// 1. Cores da Brand
+$ph-orange: #FF9900; // Laranja característico da marca
+$ph-orange-hover: #E68A00; // Laranja escuro para hover
+$ph-orange-light: #FFB74D; // Laranja suave/pastel para avisos/badges
 
-$dark-base: #121214; // Preto suave (melhor que #000 para telas)
-$dark-surface: #18181B; // Grafite escuro para cards e superfícies
-$light-base: #FFFFFF; // Branco puro
-$light-surface: #F4F4F5; // Off-white para fundos e áreas suaves
+$ph-black: #0A0A0A; // Preto quase puro para o fundo principal
+$ph-dark-card: #1B1B1B; // Grafite escuro para cards e containers
+$ph-dark-surface: #282828; // Elementos secundários, inputs e bordas
 
-// 2. Cores Pastéis para Estados
-$pastel-mint: #A7F3D0; // Verde pastel (Success)
-$pastel-peach: #FDE68A; // Amarelo/Pêssego pastel (Warning)
-$pastel-rose: #FECDD3; // Rosa pastel (Danger/Error)
-$pastel-sky: #BAE6FD; // Azul pastel (Info)
+$ph-white: #FFFFFF; // Texto principal
+$ph-gray-text: #A1A1A1; // Texto secundário e legendas
 
+// 2. Cores Funcionais Adaptadas
+$ph-danger: #FF4D4D; // Vermelho para erros/ações destrutivas
+$ph-success: #2ECC71; // Verde para confirmações
 // fontes
 $fonte-padrao: 'Inter', sans-serif;
 
-@use "bootstrap/scss/bootstrap" with ($primary: $purple-main,
-  $secondary: $purple-light,
-  $success: $pastel-mint,
-  $info: $pastel-sky,
-  $warning: $pastel-peach,
-  $danger: $pastel-rose,
-  $light: $light-surface,
-  $dark: $dark-base,
-  $body-bg: $light-base,
-  $body-color: $dark-base,
+@use "bootstrap/scss/bootstrap" with ($primary: $ph-orange,
+  $secondary: $ph-dark-surface,
+  $success: $ph-success,
+  $danger: $ph-danger,
+  $warning: $ph-orange-light,
+
+  $dark: $ph-black,
+  $light: $ph-dark-card,
+
+  $body-bg: $ph-black,
+  $body-color: $ph-white,
+
+  $link-color: $ph-orange,
+  $link-hover-color: $ph-orange-hover,
   $font-family-base: $fonte-padrao,
   $font-family-sans-serif: $fonte-padrao, );
 
 @use 'bootstrap-icons';
+
+section {
+  display: flex;
+  min-height: 100vh;
+}
+
+.ph-logo-badge {
+  background-color: var(--ph-orange);
+  color: #000000;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 3px;
+  font-weight: 800;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.ph-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: var(--ph-white);
+  user-select: none;
+}
+
+.ph-navbar {
+  background-color: var(--ph-dark-card);
+  border-bottom: 2px solid var(--ph-dark-surface);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
