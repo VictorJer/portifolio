@@ -37,6 +37,13 @@ $fonte-padrao: 'Inter', sans-serif;
 
 @use 'bootstrap-icons';
 
+// body {
+//   background: linear-gradient(180deg, #0a0a0a 85%, #1a0b2e 93%, #5b21b6 98%);
+//   background-attachment: fixed;
+//   min-height: 100%;
+//   background-repeat: no-repeat;
+// }
+
 section {
   display: flex;
   min-height: 100vh;
@@ -102,16 +109,19 @@ $ph-dark-surface: #352f2f;
 $ph-orange-faded: #ff9900; // Laranja queimado, quase marrom/cinza
 
 .bg-gradient-sombrio {
-  background: linear-gradient(135deg, $ph-black 0%, $ph-dark-surface 40%, $ph-orange-faded 100%);
+  background: linear-gradient(135deg, $ph-black 10%, $ph-dark-surface 40%, $ph-orange-faded 100%);
   border-radius: 33% 67% 53% 47% / 66% 41% 59% 34%;
   height: 31rem;
   width: 25rem;
 }
 
 .bg-gradient-top-to-bottom-smooth {
-  background: linear-gradient(180deg, #0a0a0a 50%, #1a0b2e 60%, #5b21b6 100%);
-  background-attachment: fixed;
+  background: linear-gradient(180deg, #0a0a0a 30%, #1a0b2e 40%, #5b21b6 75%, #ff9900bb 100%);
+  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
+  // padding: 0 10%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
