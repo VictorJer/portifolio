@@ -1,0 +1,40 @@
+<section id="habilidades" class="bg-gradient-top-to-bottom-smooth mt-4 mt-lg-0">
+  <div class="container my-auto py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <!-- Cabeçalho da Seção -->
+        <div class="mb-4">
+          <h2 class="display-6 mb-2 fw-medium fst-italic">Habilidades Frontend</h2>
+          <h3 class="fs-4 text-muted fw-medium fst-italic">Minhas principais habilidades</h3>
+        </div>
+
+        <!-- Lista de Habilidades -->
+        <div>
+          <ul class="list-unstyled row row-cols-1 row-cols-md-2 g-3 mt-4">
+            @for (habilidade of habilidades; track habilidade.titulo) {
+              <li class="col">
+                <article
+                  class="d-flex align-items-center gap-3 h-100 border border-1 border-warning rounded-3 p-3 bg-gradient-amber text-dark"
+                >
+                  <!-- Ícone com tamanho fixo e sem margem inferior -->
+                  <img
+                    [src]="habilidade.imagem"
+                    [alt]="habilidade.titulo"
+                    class="img-fluid flex-shrink-0"
+                    style="width: 48px; height: 48px; object-fit: contain"
+                  />
+
+                  <!-- Bloco de Texto ao lado do ícone -->
+                  <div>
+                    <h4 class="fs-5 fw-bold fst-italic mb-1">{{ habilidade.titulo }}</h4>
+                    <p class="mb-0 small opacity-75">{{ habilidade.descricao }}</p>
+                  </div>
+                </article>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
