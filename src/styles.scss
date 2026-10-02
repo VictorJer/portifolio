@@ -99,13 +99,19 @@ $ph-purple-glow: #5b21b6; // Um toque subtil de roxo no fundo para criar profund
 // Definição das cores opacas
 $ph-black: #22212100;
 $ph-dark-surface: #352f2f;
-$ph-orange-faded: #5c3812; // Laranja queimado, quase marrom/cinza
+$ph-orange-faded: #ff9900; // Laranja queimado, quase marrom/cinza
 
 .bg-gradient-sombrio {
   background: linear-gradient(135deg, $ph-black 0%, $ph-dark-surface 40%, $ph-orange-faded 100%);
   border-radius: 33% 67% 53% 47% / 66% 41% 59% 34%;
   height: 31rem;
   width: 25rem;
+}
+
+.bg-gradient-top-to-bottom-smooth {
+  background: linear-gradient(180deg, #0a0a0a 50%, #1a0b2e 60%, #5b21b6 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
