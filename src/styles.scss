@@ -116,7 +116,14 @@ $ph-orange-faded: #ff9900; // Laranja queimado, quase marrom/cinza
 }
 
 .bg-gradient-top-to-bottom-smooth {
-  background: linear-gradient(180deg, #0a0a0a 30%, #1a0b2e 40%, #5b21b6 75%, #ff9900bb 100%);
+  background: linear-gradient(
+    180deg,
+    #0a0a0a 35%,
+    #1a0b2e 47%,
+    #5b21b6 74%,
+    #692fa2 89%,
+    #ff9900 100%
+  );
   // background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
