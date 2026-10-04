@@ -30,5 +30,20 @@ export class Projetos {
         'SQL Server',
       ],
     },
+    {
+      titulo: 'Gadeias cursos',
+      descricao:
+        'A aplicação permite cadastrar cursos, alunos, tutores, turmas e categorias de cursos.',
+      urlImagem: '/img/curso.png',
+      urlRepositorio: 'https://github.com/Os-Gadeias/Gerador-de-Certificados-Online-API',
+      tecnologias: [
+        'C#',
+        'ASP.NET Core',
+        'Entity Framework',
+        'MassTransit',
+        'RabbitMQ',
+        'SQL Server',
+      ],
+    },
   ];
 }
