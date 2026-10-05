@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { ModalProjeto } from './modal-projeto/modal-projeto';
 
 interface Projeto {
   titulo: string;
@@ -9,17 +10,19 @@ interface Projeto {
 }
 
 @Component({
-  imports: [],
+  imports: [ModalProjeto],
   selector: 'app-projetos',
   templateUrl: './projetos.html',
 })
 export class Projetos {
+  public readonly projetoSelecionado = signal<Projeto | undefined>(undefined);
+
   projetos: Projeto[] = [
     {
       titulo: 'Gerador de Certificados Online',
       descricao:
         'A aplicação permite cadastrar cursos e gerar certificados online para os participantes.',
-      urlImagem: '',
+      urlImagem: '/img/sweet.png.png',
       urlRepositorio: 'https://github.com/Os-Gadeias/Gerador-de-Certificados-Online-API',
       tecnologias: [
         'C#',
@@ -46,4 +49,10 @@ export class Projetos {
       ],
     },
   ];
+
+  public selecionadoProjeto(projeto: Projeto): void {
+    this.projetoSelecionado.set(projeto);
+
+    console.log(projeto);
+  }
 }
