@@ -39,10 +39,5 @@ export class Habilidades {
       descricao: 'Plataforma de desenvolvimento de software da Microsoft.',
       imagem: 'https://skillicons.dev/icons?i=dotnet',
     },
-    {
-      titulo: 'IA',
-      descricao: 'Inteligência Artificial, para o aprendizado de automação de processos.',
-      imagem: 'https://skillicons.dev/icons?i=ai',
-    },
   ];
 }
