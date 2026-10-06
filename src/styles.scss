@@ -17,11 +17,11 @@ $ph-success: #2ecc71; // Verde para confirmações
 $fonte-padrao: 'Inter', sans-serif;
 
 @use 'bootstrap/scss/bootstrap' with (
-  $primary: $ph-orange,
+  $primary: #5b21b6,
   $secondary: $ph-dark-surface,
   $success: $ph-success,
   $danger: $ph-danger,
-  $warning: $ph-orange-light,
+  $warning: #5b21b6,
 
   $dark: $ph-black,
   $light: $ph-dark-card,
@@ -29,8 +29,8 @@ $fonte-padrao: 'Inter', sans-serif;
   $body-bg: $ph-black,
   $body-color: $ph-white,
 
-  $link-color: $ph-orange,
-  $link-hover-color: $ph-orange-hover,
+  $link-color: #5b21b6,
+  $link-hover-color: #5b21b6,
   $font-family-base: $fonte-padrao,
   $font-family-sans-serif: $fonte-padrao
 );
@@ -53,7 +53,7 @@ section {
   background-color: var(--ph-orange);
   color: #000000;
   padding: 0.15rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 22px;
   margin-left: 3px;
   font-weight: 800;
   display: inline-block;
@@ -95,6 +95,10 @@ $ph-purple-glow: #5b21b6; // Um toque subtil de roxo no fundo para criar profund
   );
 }
 
+.bg-gradient-amberD {
+  background: linear-gradient(135deg, #ff99009a 0%, #cc5200 70%);
+}
+
 .btn-amber-glow {
   background: linear-gradient(135deg, #ff9900 0%, #e65100 100%);
   color: #0a0a0a;
@@ -104,31 +108,28 @@ $ph-purple-glow: #5b21b6; // Um toque subtil de roxo no fundo para criar profund
 }
 
 // Definição das cores opacas
-$ph-black: #22212100;
+$ph-black: #000000;
 $ph-dark-surface: #352f2f;
 $ph-orange-faded: #ff9900; // Laranja queimado, quase marrom/cinza
 
 .bg-gradient-sombrio {
-  background: linear-gradient(135deg, $ph-black 10%, $ph-dark-surface 40%, $ph-orange-faded 100%);
+  background: #5a21b69a 90%;
   border-radius: 33% 67% 53% 47% / 66% 41% 59% 34%;
   height: 31rem;
   width: 25rem;
 }
 
 .bg-gradient-top-to-bottom-smooth {
-  background: linear-gradient(
-    180deg,
-    #0a0a0a 35%,
-    #1a0b2e 47%,
-    #5b21b6 74%,
-    #692fa2 89%,
-    #ff9900 100%
-  );
+  background: linear-gradient(180deg, #000000 35%, #1a0b2e 47%, #5b21b6 74%);
   // background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   // padding: 0 10%;
+}
+
+.bg-gradient-amberV {
+  background: #5b21b6;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');

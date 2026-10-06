@@ -22,7 +22,7 @@ export class Projetos {
       titulo: 'Gerador de Certificados Online',
       descricao:
         'A aplicação permite cadastrar cursos e gerar certificados online para os participantes.',
-      urlImagem: '/img/sweet.png.png',
+      urlImagem: '',
       urlRepositorio: 'https://github.com/Os-Gadeias/Gerador-de-Certificados-Online-API',
       tecnologias: [
         'C#',
