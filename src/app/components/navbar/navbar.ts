@@ -16,6 +16,5 @@ export class Navbar {
     { titulo: 'Sobre', url: '#sobre', icone: 'bi bi-person' },
     { titulo: 'Habilidades', url: '#habilidades', icone: 'bi bi-award' },
     { titulo: 'Projetos', url: '#projetos', icone: 'bi bi-card-list' },
-    { titulo: 'Linkedin', url: '#linkedin', icone: 'bi bi-linkedin' }
   ];
 }

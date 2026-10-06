@@ -1,4 +1,4 @@
-<section id="projetos" class="text-dark align-items-center">
+<section id="projetos" class="text-danger align-items-center">
   <article class="container d-flex flex-column my-5">
     <h2 class="text-center">Projetos</h2>
 
@@ -11,15 +11,16 @@
             (indice + 1).toString().padStart(2, '0')
           }}</span>
           <article class="d-flex flex-column gap-3 flex-grow-1 pt-3">
-            <h3 class="fs-2 fw-medium fst-italic text-primary text-dark">{{ projeto.titulo }}</h3>
-            <p class="fs-5 text-dark mb-0">{{ projeto.descricao }}</p>
+            <h3 class="fs-2 fw-medium fst-italic text-primary text-danger">{{ projeto.titulo }}</h3>
+            <p class="fs-5 text-danger mb-0">{{ projeto.descricao }}</p>
 
             <div class="d-flex flex-column gap-2 mt-3">
               <div class="d-flex flex-wrap gap-2" aria-label="Tecnologias utilizadas">
                 @for (tecnologia of projeto.tecnologias; track tecnologia) {
-                  <span class="badge rounded-pill border border-light-subtle text-dark px-3 py-2">{{
-                    tecnologia
-                  }}</span>
+                  <span
+                    class="badge rounded-pill border border-light-subtle text-danger px-3 py-2"
+                    >{{ tecnologia }}</span
+                  >
                 }
               </div>
               <div class="d-flex flex-wrap gap-3 ms-auto">
@@ -30,7 +31,7 @@
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#projetoModal"
-                    class="btn btn-outline-dark rounded-pill"
+                    class="btn btn-outline-danger rounded-pill"
                   >
                     <i class="bi bi-image"></i>
                     Ver Imagem
@@ -41,7 +42,7 @@
                   [href]="projeto.urlRepositorio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-outline-dark rounded-pill"
+                  class="btn btn-outline-danger rounded-pill"
                 >
                   <i class="bi bi-github"></i>
                   Repositorio</a
